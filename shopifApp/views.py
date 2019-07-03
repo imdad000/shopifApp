@@ -8,3 +8,4 @@ def home_page(request):
 	 "content":"Welcome to Home Page"
 	}
 	return render(request,"home_page.html",context)
+

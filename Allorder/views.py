@@ -93,3 +93,7 @@ def webhook_call(request):
 	r=requests.get("https://ed132262e67d426893252a6a25146285:e498ddfb0638a28216e60c34b90cffef@cab-store12.myshopify.com/admin/api/2019-04/webhooks.json")
 	data=r.json()
 	return JsonResponse(data)
+
+def get_order(request):
+	data = json.loads(request.data)
+	JsonResponse(data)
