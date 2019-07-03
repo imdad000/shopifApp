@@ -1,5 +1,4 @@
 from django import forms
-from phone_field import PhoneField
 class UpdateForm(forms.Form):
 
     email    = forms.EmailField(
