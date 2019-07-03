@@ -26,7 +26,7 @@ SECRET_KEY = '$yh$_w1h0g(kc-!n3-6jbc$$5icwjkgrt68!=j@my^!uqbh9de'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lit-hamlet-22287.herokuapp.com']
+ALLOWED_HOSTS = ['lit-hamlet-22287.herokuapp.com','localhost']
 
 
 # Application definition
