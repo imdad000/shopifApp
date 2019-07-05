@@ -4,7 +4,7 @@ from django.shortcuts import render,redirect
 import requests
 from Allorder.models import Product,Customer
 from Allorder .form import UpdateForm
-
+from django.http import HttpResponseRedirect, HttpResponse
 def cutomer_page(request):
 	query_set=Customer.objects.all()
 	context={
@@ -38,11 +38,7 @@ def edit_customer(request,customer_id):
 	abc = Customer.objects.filter(customer_id=customer_id).first()
 	print("data : ",abc.email)
 	Customer.objects.filter(customer_id=customer_id).update(email=email,contactno=contactno)
-	query_set=Customer.objects.all()
-	context={
-	'customer':query_set
-	}
-	return render(request,'customer_detail.html', context)
+	return HttpResponseRedirect('/')
 
 
 def edit_customer_page(request,customer_id):
